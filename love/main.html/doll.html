@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Do You Love Me, Palak? 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #fce4ec;
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      color: #e91e63;
+      margin-top: 20px;
+    }
+
+    .doll {
+      width: 200px;
+      animation: float 3s ease-in-out infinite;
+      margin-top: 20px;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .btn-container {
+      margin-top: 30px;
+      position: relative;
+      height: 150px;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      margin: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .yes {
+      background-color: #ff4081;
+      color: white;
+    }
+
+    .no {
+      background-color: #f8bbd0;
+      color: #880e4f;
+      position: absolute;
+    }
+
+    #message {
+      font-size: 1.4em;
+      color: #4a148c;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Palak, Do You Love Me? 💖</h1>
+
+  <!-- Cute Doll Image -->
+  <img class="doll" src="C:\Users\ASUS\OneDrive\Desktop\projects\love\main.html\WhatsApp Image 2025-05-16 at 19.50.08_376f7275.jpg" alt="Cute Doll">
+  <H1>Do You love Aditya❤️</H1>
+
+  <!-- Buttons -->
+  <div class="btn-container">
+    <button class="btn yes" onclick="showLove()">Yes 💘</button>
+    <button class="btn no" id="noBtn" onmouseover="moveButton()">No 🙈</button>
+  </div>
+
+  <!-- Result Message -->
+  <div id="message"></div>
+
+  <script>
+    function showLove() {
+      document.getElementById("message").innerHTML = "Aww 🥰 I love you too Palak! 💕💍<br>From your Aditya 💖";
+    }
+
+    function moveButton() {
+      const btn = document.getElementById("noBtn");
+      const container = document.querySelector('.btn-container');
+      const maxX = container.offsetWidth - btn.offsetWidth;
+      const maxY = container.offsetHeight - btn.offsetHeight;
+      const randX = Math.floor(Math.random() * maxX);
+      const randY = Math.floor(Math.random() * maxY);
+      btn.style.left = randX + "px";
+      btn.style.top = randY + "px";
+    }
+  </script>
+
+</body>
+</html>
